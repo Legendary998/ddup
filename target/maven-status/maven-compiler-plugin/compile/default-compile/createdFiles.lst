@@ -1,0 +1,8 @@
+com\xf\controller\UserInfoController.class
+com\xf\config\MybatisPlusConfig.class
+com\xf\entity\UserInfoEntity.class
+com\xf\DdupRun.class
+com\xf\service\impl\UserInfoSerivceImpl.class
+com\xf\service\UserInfoService.class
+com\xf\config\GeneratorCodeConfig.class
+com\xf\mapper\UserInfoDao.class

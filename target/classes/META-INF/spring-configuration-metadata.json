@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "name": "spring.memcache",
+      "type": "com.xf.config.XMemcachedProperties",
+      "sourceType": "com.xf.config.XMemcachedProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.memcache.op-timeout",
+      "type": "java.lang.Long",
+      "description": "设置默认操作超时",
+      "sourceType": "com.xf.config.XMemcachedProperties"
+    },
+    {
+      "name": "spring.memcache.pool-size",
+      "type": "java.lang.Integer",
+      "description": "nio连接池的数量",
+      "sourceType": "com.xf.config.XMemcachedProperties"
+    },
+    {
+      "name": "spring.memcache.sanitize-keys",
+      "type": "java.lang.Boolean",
+      "description": "是否启用url encode机制",
+      "sourceType": "com.xf.config.XMemcachedProperties"
+    },
+    {
+      "name": "spring.memcache.servers",
+      "type": "java.lang.String",
+      "description": "memcached服务器节点",
+      "sourceType": "com.xf.config.XMemcachedProperties"
+    }
+  ],
+  "hints": []
+}

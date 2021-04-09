@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b2f6e45-1c28-4cf8-9f13-51e26913ef0d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\software\Repositories\Maven" />
+        <option name="mavenHome" value="D:/software/apache-maven-3.6.3" />
+        <option name="outputLevel" value="DEBUG" />
+        <option name="userSettingsFile" value="D:\software\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1qrgJ9fgXs0i0pe9xZewqPwpfDM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/xf/entity" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ideaWorkSpace\ddup\src\main\resources\mapper\user" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xf.entity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ideaWorkSpace\ddup\src\main\java\com\xf\entity" />
+      <recent name="E:\ideaWorkSpace\ddup\src\main\java\com\xf\config" />
+      <recent name="E:\ideaWorkSpace\ddup\src\main\resources" />
+      <recent name="E:\ideaWorkSpace\ddup\src\main\java\com\xf\controller" />
+      <recent name="E:\ideaWorkSpace\ddup\src\main\java\com\xf\mapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DbupRun">
+    <configuration name="GeneratorCodeConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xf.config.GeneratorCodeConfig" />
+      <module name="ddup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xf.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DdupApplicationTests.run1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ddup" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xf" />
+      <option name="MAIN_CLASS_NAME" value="com.xf.DdupApplicationTests" />
+      <option name="METHOD_NAME" value="run1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DbupRun" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ddup" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xf.DdupRun" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.GeneratorCodeConfig" />
+      <item itemvalue="JUnit.DdupApplicationTests.run1" />
+      <item itemvalue="Spring Boot.DbupRun" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GeneratorCodeConfig" />
+        <item itemvalue="JUnit.DdupApplicationTests.run1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b2f6e45-1c28-4cf8-9f13-51e26913ef0d" name="Default Changelist" comment="" />
+      <created>1617843048688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617843048688</updated>
+      <workItem from="1617843052759" duration="16368000" />
+      <workItem from="1617872114766" duration="5317000" />
+      <workItem from="1617932361135" duration="11485000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="590" y="374" key="#DdupApplication" timestamp="1617872291043">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="590" y="374" key="#DdupApplication/0.0.1920.1040@0.0.1920.1040" timestamp="1617872291043" />
+    <state x="440" y="94" key="#Project_Structure" timestamp="1617872170137">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1617872170137" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617877631361">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617877631361" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1617935033868">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1617935033868" />
+    <state x="689" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1617871324149">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617871324149" />
+    <state x="619" y="228" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1617871472605">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="619" y="228" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617871472605" />
+    <state x="715" y="222" key="#xdebugger.evaluate" timestamp="1617844655864">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="222" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1617844655864" />
+    <state width="507" height="466" key="DebuggerActiveHint" timestamp="1617864236118">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="507" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1617864236118" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1617957977801">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617957977801" />
+    <state width="1877" height="373" key="GridCell.Tab.0.bottom" timestamp="1617956168054">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617956168054" />
+    <state width="1877" height="373" key="GridCell.Tab.0.center" timestamp="1617956168054">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617956168054" />
+    <state width="1877" height="373" key="GridCell.Tab.0.left" timestamp="1617956168054">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617956168054" />
+    <state width="1877" height="373" key="GridCell.Tab.0.right" timestamp="1617956168054">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617956168054" />
+    <state width="1877" height="373" key="GridCell.Tab.1.bottom" timestamp="1617956154741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617956154741" />
+    <state width="1877" height="373" key="GridCell.Tab.1.center" timestamp="1617956154741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617956154741" />
+    <state width="1877" height="373" key="GridCell.Tab.1.left" timestamp="1617956154741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617956154741" />
+    <state width="1877" height="373" key="GridCell.Tab.1.right" timestamp="1617956154741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617956154741" />
+    <state width="1877" height="373" key="GridCell.Tab.2.bottom" timestamp="1617956086695">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617956086695" />
+    <state width="1877" height="373" key="GridCell.Tab.2.center" timestamp="1617956086695">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617956086695" />
+    <state width="1877" height="373" key="GridCell.Tab.2.left" timestamp="1617956086695">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617956086695" />
+    <state width="1877" height="373" key="GridCell.Tab.2.right" timestamp="1617956086695">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="373" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617956086695" />
+    <state x="540" y="263" key="IDE.errors.dialog" timestamp="1617843167015">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="263" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617843167015" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1617958028607">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617958028607" />
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617957845826">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617957845825" />
+    <state x="334" y="180" key="new project wizard" timestamp="1617933335745">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="180" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1617933335745" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617933740152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617933740152" />
+  </component>
+</project>
