@@ -1,9 +1,15 @@
 package com.xf.controller;
 
 
+import com.xf.entity.AuthUser;
+import com.xf.service.IAuthUserroleService;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * <p>
@@ -14,7 +20,15 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-04-12
  */
 @RestController
-@RequestMapping("/auth-userrole")
+@RequestMapping("/authUuserroleManner")
 public class AuthUserroleController {
+
+    @Resource
+    IAuthUserroleService userroleService;
+
+    @RequestMapping(value = "getUserByRoleId",method = RequestMethod.POST)
+    public List<AuthUser> getUserByRoleId(Integer roleId) {
+        return userroleService.getUserListByRoleId(roleId);
+    }
 
 }

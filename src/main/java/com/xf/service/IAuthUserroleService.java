@@ -1,7 +1,10 @@
 package com.xf.service;
 
-import com.xf.entity.AuthUserrole;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.xf.entity.AuthUser;
+import com.xf.entity.AuthUserrole;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2021-04-12
  */
 public interface IAuthUserroleService extends IService<AuthUserrole> {
+
+    List<AuthUser> getUserListByRoleId(Integer roleId);
 
 }

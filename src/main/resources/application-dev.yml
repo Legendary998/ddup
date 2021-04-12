@@ -23,6 +23,10 @@ spring:
     opTimeout: 3000
     # 是否启用url encode机制
     sanitizeKeys: false
+  devtools:
+    restart:
+      enable: true
+      additional-paths: src/main/java
 
 mybatis-plus:
   configuration:
@@ -37,4 +41,3 @@ mybatis-plus:
       logic-not-delete-value: 1
       # 删除后
       logic-delete-value: 0
-

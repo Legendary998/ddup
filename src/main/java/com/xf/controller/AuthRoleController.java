@@ -1,9 +1,14 @@
 package com.xf.controller;
 
 
+import com.xf.entity.AuthRole;
+import com.xf.service.IAuthRoleService;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * <p>
@@ -14,7 +19,21 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-04-12
  */
 @RestController
-@RequestMapping("/auth-role")
+@RequestMapping("/authRoleManager")
 public class AuthRoleController {
+
+    @Resource
+    IAuthRoleService roleService;
+
+    /**
+     * 查询所有角色
+     *
+     * @return
+     */
+    @RequestMapping("getAllUserRole")
+    List<AuthRole> getAll() {
+        return roleService.list();
+    }
+
 
 }
