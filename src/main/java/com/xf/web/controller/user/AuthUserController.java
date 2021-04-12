@@ -1,4 +1,4 @@
-package com.xf.controller;
+package com.xf.web.controller.user;
 
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
