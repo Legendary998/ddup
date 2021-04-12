@@ -1,6 +1,5 @@
 package com.xf.mapper;
 
-import com.xf.entity.SysRoleUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

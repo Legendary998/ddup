@@ -1,6 +1,5 @@
 package com.xf.mapper;
 
-import com.xf.entity.SysPermission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
