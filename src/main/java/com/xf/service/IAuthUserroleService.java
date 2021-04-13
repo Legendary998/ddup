@@ -18,4 +18,6 @@ public interface IAuthUserroleService extends IService<AuthUserrole> {
 
     List<AuthUser> getUserListByRoleId(Integer roleId);
 
+    List<String> getUserIdList(String userId);
+
 }

@@ -17,8 +17,20 @@ import java.util.List;
  */
 public interface AuthUserroleMapper extends BaseMapper<AuthUserrole> {
 
+    /**
+     * 根据登录名查询用户信息
+     * @param roleId
+     * @return
+     */
     @Select("select * from auth_userrole userRole " +
             "left join auth_user authUser on userRole.UserId = authUser.id where userRole.RoleId = #{roleId} ")
     List<AuthUser> getUserListByRoleId(Integer roleId);
 
+
+    /**
+     * 根据用户id查询角色
+     * @return
+     */
+    @Select("SELECT B.id FROM Auth_UserRole A, Auth_Role B WHERE A.roleId=B.id AND B.enabled=1 AND A.userId= #{userId} ")
+    List<String> getUserIdList(String userId);
 }

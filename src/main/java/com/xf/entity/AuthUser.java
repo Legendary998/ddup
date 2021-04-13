@@ -3,6 +3,8 @@ package com.xf.entity;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
+import java.util.List;
+
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -116,5 +118,19 @@ public class AuthUser extends Model {
     @TableField("UpdateDateTime")
     private LocalDateTime UpdateDateTime;
 
+    @TableField(exist = false)
+    private List<String> roleCodeList;
+
+    @TableField(exist = false)
+    private String[] roleIdArray;
+
+    @TableField(exist = false)
+    private String roleIds;
+
+    @TableField(exist = false)
+    private String roleCodes;
+
+    @TableField(exist = false)
+    private String roleNames;
 
 }
