@@ -26,7 +26,7 @@ public class AuthUserroleController {
     @Resource
     IAuthUserroleService userroleService;
 
-    @RequestMapping(value = "getUserByRoleId",method = RequestMethod.POST)
+    @RequestMapping(value = "/getUserByRoleId",method = RequestMethod.POST)
     public List<AuthUser> getUserByRoleId(Integer roleId) {
         return userroleService.getUserListByRoleId(roleId);
     }

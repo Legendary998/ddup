@@ -30,7 +30,7 @@ public class AuthRoleController {
      *
      * @return
      */
-    @RequestMapping("getAllUserRole")
+    @RequestMapping("/getAllUserRole")
     List<AuthRole> getAll() {
         return roleService.list();
     }
