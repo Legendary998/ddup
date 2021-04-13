@@ -3,7 +3,12 @@ package com.xf.web.filter;
 import com.xf.entity.AuthUser;
 import com.xf.util.ResultData;
 import com.xf.web.common.SessionKey;
+import lombok.SneakyThrows;
+import net.rubyeye.xmemcached.MemcachedClient;
 import net.sf.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -13,14 +18,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class CorsFilter implements Filter {
-    @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-        System.out.println("init....");
-    }
+
+    @Autowired
+    private MemcachedClient memcachedClient;
 
     @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+    }
+
+    @SneakyThrows
+    @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
-        System.out.println("doFilter...");
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
         response.setHeader("Access-Control-Allow-Origin", "*");
@@ -49,6 +57,21 @@ public class CorsFilter implements Filter {
                 out.println(JSONObject.fromObject(resultInfo).toString());
                 out.flush();
                 out.close();
+            } else {
+                if (memcachedClient == null) {
+                    ServletContext sc = request.getSession().getServletContext();
+                    WebApplicationContext cxt = WebApplicationContextUtils.getWebApplicationContext(sc);
+                    // 从容器中获取memcachedClient
+                    if (cxt != null && cxt.getBean("getMemcachedClient") != null) {
+                        memcachedClient = (MemcachedClient) cxt.getBean("getMemcachedClient");
+                    }
+                }
+                if (memcachedClient != null) {
+                    memcachedClient.set("administrator_login", 1800, true);
+                }
+
+                ParameterRequestWrapper requestWrapper = new ParameterRequestWrapper(request);
+                chain.doFilter(requestWrapper, response);
             }
         }
         ParameterRequestWrapper requestWrapper = new ParameterRequestWrapper(request);
