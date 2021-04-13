@@ -1,4 +1,4 @@
-package com.xf.config;
+package com.xf.config.memcache;
 
 import lombok.extern.slf4j.Slf4j;
 import net.rubyeye.xmemcached.MemcachedClient;

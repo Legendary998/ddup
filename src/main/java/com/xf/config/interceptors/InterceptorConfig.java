@@ -1,4 +1,4 @@
-package com.xf.config.interceptor;
+package com.xf.config.interceptors;
 
 import com.xf.web.interceptor.RequestInterceptor;
 import org.springframework.context.annotation.Configuration;

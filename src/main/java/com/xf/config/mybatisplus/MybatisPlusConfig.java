@@ -1,4 +1,4 @@
-package com.xf.config;
+package com.xf.config.mybatisplus;
 
 import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;

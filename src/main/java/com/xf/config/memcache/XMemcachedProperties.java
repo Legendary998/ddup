@@ -1,4 +1,4 @@
-package com.xf.config;
+package com.xf.config.memcache;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

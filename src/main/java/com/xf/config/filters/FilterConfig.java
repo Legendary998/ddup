@@ -1,4 +1,4 @@
-package com.xf.config;
+package com.xf.config.filters;
 
 import com.xf.web.filter.CorsFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
