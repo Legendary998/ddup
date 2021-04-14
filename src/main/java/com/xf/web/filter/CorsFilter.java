@@ -40,6 +40,7 @@ public class CorsFilter implements Filter {
         response.setDateHeader("expires", -1);
         HttpSession session = request.getSession();
         if (!request.getServletPath().equals("/login") &&
+                !request.getServletPath().equals("/") &&
                 !request.getServletPath().startsWith("/upload") &&
                 !request.getServletPath().startsWith("/download") &&
                 !request.getServletPath().startsWith("/ueditor") &&

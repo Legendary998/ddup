@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 登录
- *
- * @author rain
+ * @since 2021年4月13日
+ * @author administrator
  */
 @Controller
 public class LoginController extends BaseController {
@@ -47,14 +47,14 @@ public class LoginController extends BaseController {
      */
     @ResponseBody
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public ResultData login(String loginname, String password, String captcha) throws IOException {
+    public ResultData login(String loggingName, String password, String captcha) throws IOException {
         String flag = request.getParameter("flag");
         ResultData data = new ResultData();
 //        if (StringTools.isNullOrEmpty(captcha)) {
 //            data.setMessage("请输入验证码！");
 //            return data;
 //        }
-        if (StringTools.isNullOrEmpty(loginname)) {
+        if (StringTools.isNullOrEmpty(loggingName)) {
             data.setMessage("请输入验用户名！");
             return data;
         }
@@ -63,7 +63,7 @@ public class LoginController extends BaseController {
             return data;
         }
         try {
-            data = userauthorizationService.login(loginname, password);
+            data = userauthorizationService.login(loggingName, password);
             if (data.getState() == 10000) {
                 AuthUser logingUser = (AuthUser) data.getObj();
                 Date loginDateTime = new Date();
@@ -91,19 +91,18 @@ public class LoginController extends BaseController {
                     }
                 }
                 // 更新登陆用户
-                logingUser.setLastLoginDateTime(logingUser
-                        .getThisLoginDateTime());
+                logingUser.setLastLoginDateTime(logingUser.getThisLoginDateTime());
                 logingUser.setThisLoginDateTime(loginDateTime.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime());
                 logingUser.setLastLoginIp(logingUser.getThisLoginIp());
                 logingUser.setThisLoginIp(request.getRemoteAddr());
                 // 记录登陆日志
                 logingLogId = UUIDTools.randomUUID();
-                SysLoginlog logingLog = new SysLoginlog();
-                logingLog.setId(logingLogId);
-                logingLog.setLoginName(logingUser.getUsername());
-                logingLog.setSessionId(session.getId());
-                logingLog.setLoginIp(request.getRemoteAddr());
-                logingLog.setClientInfo(String
+                SysLoginlog loggingLog = new SysLoginlog();
+                loggingLog.setId(logingLogId);
+                loggingLog.setLoginName(logingUser.getUsername());
+                loggingLog.setSessionId(session.getId());
+                loggingLog.setLoginIp(request.getRemoteAddr());
+                loggingLog.setClientInfo(String
                                 .format("[Scheme:%s] [Server Name:%s] [Server Port:%s] [Protocol:%s] [Remote Addr:%s] [Remote Host:%s] [Character Encoding:%s] [Content Length:%s] [Content Type:%s] [Auth Type:%s] [HTTP Method:%s] [Path Info:%s] [Path Trans:%s] [Query String:%s] [Remote User:%s] [Request URI:%s] [Servlet Path:%s] [Accept:%s] [Host:%s] [Referer:%s] [Accept-Language:%s] [Accept-Encoding:%s] [User-Agent:%s] [Connection:%s] [Cookie:%s] [Session Id:%s]",
                                         request.getScheme(),
                                         request.getServerName(),
@@ -131,20 +130,17 @@ public class LoginController extends BaseController {
                                         request.getHeader("Connection"),
                                         request.getHeader("Cookie"),
                                         request.getRequestedSessionId()));
-                logingLog.setLoginDateTime(logingUser
-                        .getThisLoginDateTime());
-                logingLog.setCreateDateTime(logingUser
-                        .getThisLoginDateTime());
-
+                loggingLog.setLoginDateTime(logingUser.getThisLoginDateTime());
+                loggingLog.setCreateDateTime(logingUser.getThisLoginDateTime());
                 userService.saveOrUpdate(loginedUser);
-                sysLoginlogService.saveOrUpdate(logingLog);
+                sysLoginlogService.saveOrUpdate(loggingLog);
 
                 setSession(SessionKey.SESSION_LOGINID, logingLogId);
                 setSession(SessionKey.SESSION_USER, logingUser);
 
                 //登陆成功如果选择的记住用户名
                 if (flag != null && flag.equals("1")) {
-                    Cookie cookie = new Cookie("cookie_user", loginname + "," + null);
+                    Cookie cookie = new Cookie("cookie_user", loggingName + "," + null);
                     cookie.setMaxAge(60 * 60 * 24 * 30);
                     response.addCookie(cookie);
                 }/*else{

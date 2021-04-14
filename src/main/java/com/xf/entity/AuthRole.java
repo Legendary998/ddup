@@ -3,6 +3,9 @@ package com.xf.entity;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Set;
+
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -62,5 +65,19 @@ public class AuthRole extends Model {
     @TableField("UpdateDateTime")
     private LocalDateTime UpdateDateTime;
 
+    @TableField(exist = false)
+    private String menuIds;
+
+    @TableField(exist = false)
+    private String[] menuIdArray;
+
+    @TableField(exist = false)
+    private String permissionIds;
+
+    @TableField(exist = false)
+    private String[] permissionIdArray;
+
+    @TableField(exist = false)
+    private Set<AuthPermission> permissions;
 
 }

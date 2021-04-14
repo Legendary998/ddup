@@ -27,6 +27,15 @@ spring:
     restart:
       enable: true
       additional-paths: src/main/java
+  thymeleaf:
+    # 默认路径
+    prefix: classpath:/templates/
+    # 后缀
+    suffix: .html
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+      cache: false
 
 mybatis-plus:
   configuration:

@@ -17,6 +17,6 @@ import java.util.List;
  */
 public interface AuthUserMapper extends BaseMapper<AuthUser> {
 
-    @Select("SELECT * FROM auth_user ")
-    List<AuthUser> getAll();
+    @Select("SELECT * FROM auth_user a where a.Username = #{username}")
+    AuthUser getUserByUserName(String username);
 }

@@ -5,6 +5,7 @@ import com.xf.entity.AuthRole;
 import com.xf.service.IAuthRoleService;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -30,7 +31,7 @@ public class AuthRoleController {
      *
      * @return
      */
-    @RequestMapping("/getAllUserRole")
+    @RequestMapping(value = "/getAllUserRole",method = RequestMethod.GET)
     List<AuthRole> getAll() {
         return roleService.list();
     }

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
@@ -120,6 +121,9 @@ public class AuthUser extends Model {
 
     @TableField(exist = false)
     private List<String> roleCodeList;
+
+    @TableField(exist = false)
+    private Set<AuthRole> roles;
 
     @TableField(exist = false)
     private String[] roleIdArray;
