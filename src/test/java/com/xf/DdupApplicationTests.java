@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.mongodb.core.MongoTemplate;
 
 import java.util.concurrent.TimeoutException;
 
@@ -19,6 +20,9 @@ class DdupApplicationTests {
     @Autowired
     private MemcachedClient memcachedClient;
 
+    @Autowired
+    private MongoTemplate mongoTemplate;
+
     @Test
     void contextLoads() {
     }
@@ -29,7 +33,7 @@ class DdupApplicationTests {
 //        boolean flag = memcachedClient.set("a", 0,  1);
 
         // 取出缓存
-        Object a = memcachedClient.get("LX02_15956901871");
+        Object a = memcachedClient.get("goodFlag8");
         log.warn("a is [{}]", a);
         System.out.println(a.toString());
 

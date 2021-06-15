@@ -17,6 +17,7 @@ import com.xf.util.UUIDTools;
 import com.xf.web.base.BaseController;
 import com.xf.web.common.SessionKey;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,8 +25,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 登录
- * @since 2021年4月13日
+ *
  * @author administrator
+ * @since 2021年4月13日
  */
 @Controller
 public class LoginController extends BaseController {
@@ -103,33 +105,33 @@ public class LoginController extends BaseController {
                 loggingLog.setSessionId(session.getId());
                 loggingLog.setLoginIp(request.getRemoteAddr());
                 loggingLog.setClientInfo(String
-                                .format("[Scheme:%s] [Server Name:%s] [Server Port:%s] [Protocol:%s] [Remote Addr:%s] [Remote Host:%s] [Character Encoding:%s] [Content Length:%s] [Content Type:%s] [Auth Type:%s] [HTTP Method:%s] [Path Info:%s] [Path Trans:%s] [Query String:%s] [Remote User:%s] [Request URI:%s] [Servlet Path:%s] [Accept:%s] [Host:%s] [Referer:%s] [Accept-Language:%s] [Accept-Encoding:%s] [User-Agent:%s] [Connection:%s] [Cookie:%s] [Session Id:%s]",
-                                        request.getScheme(),
-                                        request.getServerName(),
-                                        request.getServerPort(),
-                                        request.getProtocol(),
-                                        request.getRemoteAddr(),
-                                        request.getRemoteHost(),
-                                        request.getCharacterEncoding(),
-                                        request.getContentLength(),
-                                        request.getContentType(),
-                                        request.getAuthType(),
-                                        request.getMethod(),
-                                        request.getPathInfo(),
-                                        request.getPathTranslated(),
-                                        request.getQueryString(),
-                                        request.getRemoteUser(),
-                                        request.getRequestURI(),
-                                        request.getServletPath(),
-                                        request.getHeader("Accept"),
-                                        request.getHeader("Host"),
-                                        request.getHeader("Referer"),
-                                        request.getHeader("Accept-Language"),
-                                        request.getHeader("Accept-Encoding"),
-                                        request.getHeader("User-Agent"),
-                                        request.getHeader("Connection"),
-                                        request.getHeader("Cookie"),
-                                        request.getRequestedSessionId()));
+                        .format("[Scheme:%s] [Server Name:%s] [Server Port:%s] [Protocol:%s] [Remote Addr:%s] [Remote Host:%s] [Character Encoding:%s] [Content Length:%s] [Content Type:%s] [Auth Type:%s] [HTTP Method:%s] [Path Info:%s] [Path Trans:%s] [Query String:%s] [Remote User:%s] [Request URI:%s] [Servlet Path:%s] [Accept:%s] [Host:%s] [Referer:%s] [Accept-Language:%s] [Accept-Encoding:%s] [User-Agent:%s] [Connection:%s] [Cookie:%s] [Session Id:%s]",
+                                request.getScheme(),
+                                request.getServerName(),
+                                request.getServerPort(),
+                                request.getProtocol(),
+                                request.getRemoteAddr(),
+                                request.getRemoteHost(),
+                                request.getCharacterEncoding(),
+                                request.getContentLength(),
+                                request.getContentType(),
+                                request.getAuthType(),
+                                request.getMethod(),
+                                request.getPathInfo(),
+                                request.getPathTranslated(),
+                                request.getQueryString(),
+                                request.getRemoteUser(),
+                                request.getRequestURI(),
+                                request.getServletPath(),
+                                request.getHeader("Accept"),
+                                request.getHeader("Host"),
+                                request.getHeader("Referer"),
+                                request.getHeader("Accept-Language"),
+                                request.getHeader("Accept-Encoding"),
+                                request.getHeader("User-Agent"),
+                                request.getHeader("Connection"),
+                                request.getHeader("Cookie"),
+                                request.getRequestedSessionId()));
                 loggingLog.setLoginDateTime(logingUser.getThisLoginDateTime());
                 loggingLog.setCreateDateTime(logingUser.getThisLoginDateTime());
                 userService.saveOrUpdate(loginedUser);
@@ -150,6 +152,7 @@ public class LoginController extends BaseController {
 						response.addCookie(cookie);
 					}*/
 
+                toIndex(data);
             } else if (data.getState() == 20000) {
                 data.setMessage("用户名不存在");
             } else if (data.getState() == 30000) {
@@ -166,5 +169,12 @@ public class LoginController extends BaseController {
             data.setMessage(e.getMessage());
         }
         return data;
+    }
+
+    public String toIndex(ResultData data) {
+        ModelMap map = new ModelMap();
+        AuthUser user = (AuthUser) data.getObj();
+        map.addAttribute("name", user.getRoleNames());
+        return "thymeleaf/index";
     }
 }

@@ -36,6 +36,21 @@ spring:
     servlet:
       content-type: text/html
       cache: false
+  data:                        #芒果db配置
+      mongodb:
+        host: 192.168.108.57
+        port: 30000
+        database: collection_2019
+        username: manager
+        password: 20180101
+        authentication-database: admin
+
+#rabbitmq 配置
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 
 mybatis-plus:
   configuration:
